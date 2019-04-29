@@ -44,14 +44,14 @@ export default class Column extends React.Component {
     return (
       <Draggable draggableId={this.props.column.id} index={this.props.index}>
         {provided => (
-          <Container {...provided.draggableProps} ref={provided.innerRef}>
+          <Container {...provided.draggableProps} innerRef={provided.innerRef}>
             <Title {...provided.dragHandleProps}>
               {this.props.column.title}
             </Title>
             <Droppable droppableId={this.props.column.id} type="task">
               {(provided, snapshot) => (
                 <TaskList
-                  ref={provided.innerRef}
+                  innerRef={provided.innerRef}
                   {...provided.droppableProps}
                   isDraggingOver={snapshot.isDraggingOver}
                 >

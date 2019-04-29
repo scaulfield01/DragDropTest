@@ -136,7 +136,7 @@ class App extends React.Component {
           {provided => (
             <Container
               {...provided.droppableProps}
-              ref={provided.innerRef}
+              innerRef={provided.innerRef}
             >
               {this.state.columnOrder.map((columnId, index) => {
                 const column = this.state.columns[columnId];
